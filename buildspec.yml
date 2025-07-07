@@ -8,7 +8,7 @@ phases:
       - echo "Starting deployment process..."
   build:
     commands:
-      - echo "No build step required for static files."
+      - echo "No build step required for static files"
   post_build:
     commands:
       - echo "Uploading files to S3..."
