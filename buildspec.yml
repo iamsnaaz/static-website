@@ -12,8 +12,8 @@ phases:
   post_build:
     commands:
       - echo "Uploading files to S3..."
-      - aws s3 cp index.html s3://myproject-static-website-bucket/ --acl public-read
-      - aws s3 cp error.html s3://myproject-static-website-bucket/ --acl public-read
+      - aws s3 cp index.html s3://myproject-static-website-bucket/ 
+      - aws s3 cp error.html s3://myproject-static-website-bucket/ 
       - echo "Invalidating CloudFront cache..."
       - aws cloudfront create-invalidation --distribution-id E26VVPNDMEW3W7 --paths "/*"
 
