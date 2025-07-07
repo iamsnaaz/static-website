@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - echo "Starting deployment process..."
+  build:
+    commands:
+      - echo "No build step required for static files."
+  post_build:
+    commands:
+      - echo "Uploading files to S3..."
+      - aws s3 cp index.html s3://myproject-static-website-bucket/ --acl public-read
+      - aws s3 cp error.html s3://myproject-static-website-bucket/ --acl public-read
+      - echo "Invalidating CloudFront cache..."
+      - aws cloudfront create-invalidation --distribution-id E26VVPNDMEW3W7 --paths "/*"
+
+artifacts:
+  files:
+    - index.html
+    - error.html
