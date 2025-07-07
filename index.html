@@ -1,10 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Welcome to My Static Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Name - Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #222;
+      color: white;
+      padding: 2rem 1rem;
+    }
+
+    img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin-top: 20px;
+    }
+
+    .content {
+      padding: 2rem;
+    }
+
+    .card {
+      background: white;
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello, World!</h1>
-  <p>This site is hosted on <strong>Amazon S3</strong>!</p>
+  <header>
+    <h1>Your Name</h1>
+    <p>Web Developer | Designer | Creator</p>
+  </header>
+
+  <div class="content">
+    <img src="profile.jpg" alt="Your Photo" />
+
+    <div class="card">
+      <h2>About Me</h2>
+      <p>Hello! I'm a passionate web developer with experience in HTML, CSS, JavaScript, and React. I love building user-friendly websites and learning new technologies.</p>
+    </div>
+
+    <div class="card">
+      <h2>Projects</h2>
+      <ul style="list-style: none; padding: 0;">
+        <li><strong>Portfolio Website</strong> – Personal static site hosted on AWS</li>
+        <li><strong>Todo App</strong> – Built with React & Firebase</li>
+        <li><strong>Weather App</strong> – Fetches live weather using OpenWeatherMap API</li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>
+
